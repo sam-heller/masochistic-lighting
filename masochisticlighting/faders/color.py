@@ -1,8 +1,8 @@
 from DMXEnttecPro import Controller
-from .Fader import Fader
+from ..fader import Fader
 
 
-class BrightnessFader(Fader):
+class ColorFader(Fader):
     def __init__(self, channel: int, controller=Controller):
         super().__init__(channel, controller)
-        self.max = 100
+        self.max = 255
