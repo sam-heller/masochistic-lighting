@@ -4,6 +4,8 @@ Why buy perfectly affordable smart bulbs that are easy to install and come with 
 #### [TouchOSC Editor](https://hexler.net/products/touchosc)
 DIY Control Surface on your phone/tablet/whatever
 Faders are for Red/Green/Blue channels, on and off buttons do what you'd expect
+
+
 ![](assets/img/osc.png)
 #### [DMX Enttec Pro module](https://pypi.org/project/DMXEnttecPro/)
 Blissfully straightforward interface to control DMX lights over the DMX Pro. Check out their docs for help figuring out what interface address to attach to.
@@ -27,6 +29,8 @@ I Definitely did.
 ![](assets/img/dmx-5-to-3.jpg)
 #### [Dodgy DMX Par Lights (8-pack)](https://www.amazon.com/gp/product/B01N2NIOTR)
 $15 a pop, you get what you pay for
+
+
 ![](assets/img/dodgy-lights.jpg)
 
 |Channel |Data |Function |
