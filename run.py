@@ -12,13 +12,13 @@ def build_scene(controller_port: str = '/dev/ttyUSB0', addresses: list = [1]):
     built_scene = Scene(dmx)
     for address in addresses:
         built_scene.add_cheapo(address=address)
-    built_scene.update(0, 0, 0, 0)
+    built_scene.update(100, 0, 0, 0)
     return built_scene
 
 
 # Build a dispatch handler to parse the OSC
 # message and update the lights accordingly
-def build_osc_handler(address, *args):
+def osc_handler(address, *args):
     update_value = math.floor(float(args[1]))
     target_scene = args[0][0]
     target = address.replace('/light/', '')
@@ -30,9 +30,9 @@ def build_osc_handler(address, *args):
 
 # Build the Message Handler
 room = build_scene(addresses=[1, 6, 11, 21])
-osc_handler = dispatcher.Dispatcher()
-osc_handler.map("/light/*", osc_handler, room)
+osc_dispatcher = dispatcher.Dispatcher()
+osc_dispatcher.map("/light/*", osc_handler, room)
 
 # Start the Server
 server_address = ("192.168.0.33", 5005)
-osc_server.ThreadingOSCUDPServer(server_address, osc_handler).serve_forever();
+osc_server.ThreadingOSCUDPServer(server_address, osc_dispatcher).serve_forever()
