@@ -1,2 +1,5 @@
 python-osc
 DMXEnttecPro
+pypubsub
+pyyaml
+singleton-decorator

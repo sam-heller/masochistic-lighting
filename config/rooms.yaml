@@ -1,0 +1,28 @@
+bedroom:
+  startup:
+    red: 255
+    green: 100
+    blue: 0
+    intensity: 80
+  fixtures:
+    desk:
+      model: cheap
+      channel: 1
+    desk_floor:
+      model: cheap
+      channel: 6
+    heater:
+      model: cheap
+      channel: 11
+    window_floor:
+      model: cheap
+      channel: 16
+    window_ceiling:
+      model: cheap
+      channel: 21
+    corner:
+      model: cheap
+      channel: 26
+    bed:
+      model: cheap
+      channel: 31
